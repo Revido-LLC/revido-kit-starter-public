@@ -1,0 +1,5 @@
+@import "tailwindcss";
+/* Kit tokens (light + .dark), Tailwind theme, React Aria variants and class scanning. */
+@import "@revido-llc/kit/css";
+/* This project's brand, generated from theme.config.mjs by `pnpm theme`. Keep it last. */
+@import "./theme.css";

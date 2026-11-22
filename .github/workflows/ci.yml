@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, converted_to_draft]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event_name }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  draft-pending:
+    name: ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == true && 'check' || 'Draft validation sentinel' }}
+    if: github.event_name == 'pull_request' && github.event.pull_request.draft == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - run: |
+          echo '::error::Draft PR: validation is deferred until ready for review.'
+          exit 1
+
+  check:
+    name: ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == true && 'Draft deferred - check' || 'check' }}
+    if: github.event_name != 'pull_request' || github.event.pull_request.draft != true
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+
+      - run: node --test scripts/ci-draft-policy.test.mjs
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm check
