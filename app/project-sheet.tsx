@@ -12,7 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   TextField,
-} from "@revido-llc/kit";
+} from "@revido/kit";
 import type { Project, ProjectStatus } from "./data";
 
 const statusOptions: Array<{ id: ProjectStatus; label: string }> = [

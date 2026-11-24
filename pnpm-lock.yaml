@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@revido-llc/kit':
-        specifier: 0.13.1
-        version: 0.13.1(max4qhcm36ys7o7fmn57c242pq)
+      '@revido/kit':
+        specifier: 0.14.1
+        version: 0.14.1(max4qhcm36ys7o7fmn57c242pq)
       lucide-react:
         specifier: 1.54.0
         version: 1.54.0(@types/react@19.3.0)(react@19.3.0)
@@ -713,8 +713,8 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@revido-llc/kit@0.13.1':
-    resolution: {integrity: sha512-dY1DwCnog8+UU77jNgygmxnO+cAeqLAdmn1OTT7gxQ7O6F48F17tuckazO05WJ5bM1cuTmT4FRrfRGIocwZFyQ==}
+  '@revido/kit@0.14.1':
+    resolution: {integrity: sha512-ef07rEiu5asSeVHo7xojIxGv6qGpS0CgaFyKM8Qo/2s18KKuoJ5SFO0KsSaEQMs+SfKSC/PdDRZY4WQAiztcYA==}
     engines: {node: '>=22'}
     peerDependencies:
       '@tiptap/core': 3.30.5
@@ -3456,7 +3456,7 @@ snapshots:
     dependencies:
       react: 19.3.0
 
-  '@revido-llc/kit@0.13.1(max4qhcm36ys7o7fmn57c242pq)':
+  '@revido/kit@0.14.1(max4qhcm36ys7o7fmn57c242pq)':
     dependencies:
       '@internationalized/date': 3.12.4
       '@tanstack/react-table': 9.2.8(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
