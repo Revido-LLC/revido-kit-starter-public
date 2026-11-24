@@ -1,6 +1,6 @@
 "use client";
 
-import { Badge, DataTable, createDataTableColumnHelper } from "@revido-llc/kit";
+import { Badge, DataTable, createDataTableColumnHelper } from "@revido/kit";
 import { euro, type Project, type ProjectStatus } from "./data";
 
 const status: Record<ProjectStatus, { label: string; tone: "success" | "warning" | "neutral" }> = {

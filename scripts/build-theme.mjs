@@ -4,7 +4,7 @@
 //   node scripts/build-theme.mjs          write app/theme.css
 //   node scripts/build-theme.mjs --check  fail when app/theme.css is out of date (CI)
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { clampToSrgb, contrastReport, createTheme, renderTokensCss } from "@revido-llc/kit/tokens";
+import { clampToSrgb, contrastReport, createTheme, renderTokensCss } from "@revido/kit/tokens";
 import brand from "../theme.config.mjs";
 
 const theme = createTheme(brand);
@@ -19,7 +19,7 @@ if (failures.length > 0) {
 }
 
 // The project's theme owns :root and .dark, so it replaces the Revido colours
-// that @revido-llc/kit/css sets. Import it after the Kit CSS (app/globals.css).
+// that @revido/kit/css sets. Import it after the Kit CSS (app/globals.css).
 // The Kit's renderer opens with its own "edit packages/kit" header; replace it with ours.
 const header = `/* GENERATED from theme.config.mjs by \`pnpm theme\` (scripts/build-theme.mjs). Do not edit.
  * Revido Kit tokens for theme "${theme.name}", light and dark. */

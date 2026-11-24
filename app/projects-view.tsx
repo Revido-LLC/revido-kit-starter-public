@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Page, PageHeader, PageSummary } from "@revido-llc/kit";
+import { Page, PageHeader, PageSummary } from "@revido/kit";
 import { euro, type Project } from "./data";
 import { ProjectSheet } from "./project-sheet";
 import { ProjectsTable } from "./projects-table";

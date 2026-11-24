@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { PageBar, PageContent, PageProvider } from "@revido-llc/kit";
-import { NextKitProvider } from "@revido-llc/kit/next";
-import { revidoFont } from "@revido-llc/kit/next/font";
+import { PageBar, PageContent, PageProvider } from "@revido/kit";
+import { NextKitProvider } from "@revido/kit/next";
+import { revidoFont } from "@revido/kit/next/font";
 import "./globals.css";
 
 export const metadata: Metadata = {

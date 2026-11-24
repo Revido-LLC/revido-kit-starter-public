@@ -1,8 +1,8 @@
 # Revido Kit agent guide
 
-This starter targets `@revido-llc/kit@0.13.1`. Use the docs shipped with the installed version. Install the project with `pnpm install --frozen-lockfile` if needed.
+This starter targets `@revido/kit@0.14.1`. Use the docs shipped with the installed version. Install the project with `pnpm install --frozen-lockfile` if needed.
 
-1. Open `node_modules/@revido-llc/kit/dist/generated/llms.txt` for the component index. Read the relevant Markdown in `dist/generated/docs/` inside that package, starting with `data-table.md` and `sheet.md`. These pages include usage examples. The companion examples are available as `@revido-llc/kit/examples/data-table` and `@revido-llc/kit/examples/sheet`.
+1. Open `node_modules/@revido/kit/dist/generated/llms.txt` for the component index. Read the relevant Markdown in `dist/generated/docs/` inside that package, starting with `data-table.md` and `sheet.md`. These pages include usage examples. The companion examples are available as `@revido/kit/examples/data-table` and `@revido/kit/examples/sheet`.
 2. Follow `app/projects-table.tsx`, `app/projects-view.tsx`, and `app/project-sheet.tsx`. Use the Kit page frame, `DataTable`, and `Sheet` with labeled Kit fields. Keep `NextKitProvider` and use semantic classes like `bg-background` and `text-foreground`. Read the relevant installed Next.js guide in `node_modules/next/dist/docs/` before changing routing or server and client component boundaries.
 3. If you change `theme.config.mjs`, run `pnpm theme` and commit `app/theme.css`. Run `pnpm check` before finishing and resolve any failures. MCP is optional.
 

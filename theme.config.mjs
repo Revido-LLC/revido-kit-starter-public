@@ -2,7 +2,7 @@
 // Override only what the brand needs; everything else keeps the Revido defaults.
 // All options: README.md → Theming.
 
-/** @type {Parameters<typeof import("@revido-llc/kit/tokens").createTheme>[0]} */
+/** @type {Parameters<typeof import("@revido/kit/tokens").createTheme>[0]} */
 const theme = {
   name: "acme",
   colors: { brand: "#16A34A" },
